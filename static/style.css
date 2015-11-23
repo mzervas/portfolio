@@ -1,0 +1,285 @@
+@media only screen and (min-device-width: 320px)  {
+
+	#h{
+		display: block;
+		text-align: left;
+		border: solid 10px white;
+		background: white;
+		opacity: 0.3;
+		padding-bottom: 30px;
+		margin-bottom: 4%;
+	}
+
+	#h h1 {
+		font-size: 950%;
+	}
+
+	#h h2 {
+		font-size: 550%;
+	}
+
+	body {
+		background-image: url("../static/grad.jpg");
+	}
+
+	#hometext a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	#hometext a:hover > h3 {
+		text-decoration: none;
+		color: black;
+		background-color: #3385D6;
+	}
+
+	#nav1{
+		display: none;
+	}
+
+	#nav2 {
+		display: inline;
+		margin-top: 10%;
+	}
+
+	#nav2 span {
+		margin-top: 4%;
+		font-size: 250%;
+		color: white;
+	}
+
+	#nav2 a {
+		font-size: 450%;
+	}
+
+	#homejumbo .jumbotron {
+		display: block;
+		opacity: 0.3;
+		border-radius: 30px;
+		margin-left: 4%;
+		margin-right: 4%;
+		text-align: center;
+	}
+
+	#homejumbo .jumbotron h2, h3 {
+		font-size: 250%;
+		color: black;
+	}
+
+	#mid img {
+		border-radius: 30px;
+		display: block;
+		width: 92%;
+		margin: 4%;
+	}
+
+	#bottom img {
+		width: 10%;
+		display: inline-block;
+	}
+
+
+	footer {
+		background: #24394D;
+		margin-top: 4%;
+		padding-top: 4%;
+		position: relative;
+		bottom: 0;
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 0;
+	}
+
+	footer p {
+		font-size: 1em !important;
+		color: white;
+	}
+
+
+	#About h2 {
+		font-size: 450%;
+		font-weight: bold;
+		color: black;
+	}
+	#About p {
+		font-weight: bold;
+		font-size: 350%;
+	}
+	#About a {
+		text-decoration: none;
+		font-weight: bold;
+		color: black;
+	}
+	#About a:hover {
+		color: black;
+		background-color: #3385D6;
+	}
+
+	#About .jumbotron{
+		padding-bottom: 4%;
+		margin-top: 4%;
+		opacity: 0.3;
+		border-radius: 30px;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+
+	#About .jumbotron h2 {
+		text-align: center;
+	}
+	
+	.photos ul li img{
+		padding-right: 2%;
+		height: auto;
+		width: 125px;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.photos ul {
+ 		margin-left: -10px;
+	}
+
+	.photos ul li {
+		list-style: none;
+		margin-bottom: 25px;
+	}
+
+
+	#cont .jumbotron{
+		margin-top: 4%;
+		opacity: 0.3;
+		border-radius: 30px;
+		margin-left: 15%;
+		margin-right: 15%;
+		height: 80%;
+		padding-right: 3%;
+		padding-left: 3%;
+
+	}
+
+	#cont .jumbotron h2, h4, p {
+		margin: 10px;
+		color: black;
+	}
+
+	#cont h2 {
+		font-size: 500%;
+		font-weight: bold;
+	}
+	#cont #Contact h2 {
+		font-size: 550%;
+		font-weight: bold;
+	}
+	#cont p {
+		font-size: 400%;
+		font-weight: bold;
+	}
+	#cont h4 {
+		font-size: 350%
+	}
+
+}
+
+@media only screen and (min-device-width: 520px) {
+
+	#h h1 {
+		font-size: 600%;
+	}
+	#h h2 {
+		font-size: 450%;
+	}
+	#About h2 {
+		font-size: 250%;
+		font-weight: normal;
+	}
+	#About p {
+		font-size: 150%;
+		font-weight: normal;
+	}
+	#cont h2 {
+		font-size: 250%;
+	}
+	#cont h4 {
+		font-size: 150%;
+		font-weight: normal;
+	}
+	#cont #Contact h2 {
+		font-size: 250%;
+	}
+	#cont #Contact p {
+		font-size: 150%;
+		font-weight: normal;
+	}
+	#nav1 {
+		display: none;
+	}
+	#nav2 {
+		display: block;
+	}
+
+	#About .jumbotron{
+	margin-left: 10%;
+	margin-right: 10%;
+	}
+
+	footer {
+		position: relative;
+		bottom: 0;
+	}
+
+	.photos ul li img{
+		width: 150px;
+	}
+}
+
+@media only screen and (min-device-width: 800px) {
+	
+	#nav2 {
+		display: none;
+	}
+	#nav1 {
+		margin-top: 2%;
+		display: inline-block;
+	}
+	#nav1 ul li a{
+		text-decoration: none;
+		color: white;
+		font-size: 125%;
+	}
+	
+	#homejumbo {
+		display: block;
+		margin-top: 4%;
+		margin-bottom: 4%;
+
+	}
+	#homejumbo .jumbotron {
+		float: right;
+		width: 48%;
+		margin: 0 1% 0 1%;
+	}
+
+	#mid img {
+		float: left;
+		height: auto;
+		position: relative;
+		margin: 0 1% 0 1%;
+		width: 48%;
+		display: block;
+		border-radius: 30px;
+	}
+
+	#bottom img {
+		width: 5%;
+	}
+
+	.photos ul li img{
+		width: 150px;
+		padding-right: 35px;
+	}
+	.photos ul {
+		margin-left: -35px;
+	}
+
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block home %}
+<section id="cont">
+  <div class="tab-content">
+    <div class="jumbotron">
+      <div id="Photos" class="tab-pane fade in active">      
+        <h2>Here are some things I have created:</h2>
+        <h4>Click to enlarge.</h4>
+
+  <div class = "photos">
+    <div class="container">
+      <ul class="row">
+           <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/ob.png" alt="Oberon"/></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="static/bm.png" alt="Batman"/></li>
+            </ul>
+            <h4>These two images were traced using Adobe Illustrator 2015 as a member of the Design Team within Kappa Theta Pi.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('li img').on('click',function(){
+          var src = $(this).attr('src');
+          var img = '<img src="' + src + '" class="img-responsive"/>';
+          $('#myModal').modal();
+          $('#myModal').on('shown.bs.modal', function(){
+              $('#myModal .modal-body').html(img);
+          });
+          $('#myModal').on('hidden.bs.modal', function(){
+              $('#myModal .modal-body').html('');
+          });
+    });
+  })
+  </script>
+{% endblock %}

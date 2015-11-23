@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name = 'viewport' content='width-device-width initial-scale=1'>
+<title>Merri Zervas</title>
+      <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap-theme.css"/>
+      <link rel="stylesheet" href="../static/bootstrap/css/bootstrap-theme.min.css"/>
+      <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css"/>
+      
+      <script src="../static/bootstrap/js/bootstrap.js"></script>
+      <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+      
+      <link rel="stylesheet" href="../static/style.css"/>
+<meta charset = "UTF-8">
+</head>
+<body>
+  <header>
+  <section id="h">
+	<h1>MGZ</h1>
+	<h2>Merri Grace Zervas</h2>
+</section>
+
+<nav>
+	<section id="nav1">
+	<ul class="nav nav-pills nav-justified">
+  		<li {% if name == "index" %} class="active" {% endif %} role="presentation"><a href="index">Home</a></li>
+  		<li {% if name == "about" %} class="active" {% endif %} role="presentation"><a href="about">About</a></li>
+  		<li {% if name == "skills" %} class="active" {% endif %} role="presentation"><a href="skills">Skills</a></li>
+  		<li {% if name == "photos" %} class="active" {% endif %} role="presentation"><a href="photos">Photos</a></li>
+  		<li {% if name == "contact" %} class="active" {% endif %} role="presentation"><a href="contact">Contact</a></li>
+		</ul>
+	</section>
+</nav>
+
+<nav>
+  <section id="nav2">
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+      <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-justify"></span></a>
+        <ul class="dropdown-menu">
+          <li {% if name == "index" %} class="active" {% endif %} ><a href="index">Home</a></li>
+          <li {% if name == "about" %} class="active" {% endif %}><a href="about">About</a></li>
+          <li {% if name == "skills" %} class="active" {% endif %}><a href="skills">Skills</a></li>
+          <li {% if name == "photos" %} class="active" {% endif %} ><a href="photos">Photos</a></li>
+          <li {% if name == "contact" %} class="active" {% endif %} ><a href="contact">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+</header>
+
+{% block home %}
+XX
+{% endblock %}
+
+
+ <footer>
+  	<section id = "bottom">
+  		<div>
+  			<a href="http://www.facebook.com/merri.zervas"><img src="static/fbook.png" alt="Facebook"/></a>
+  			<a href="http://www.twitter.com/mzervas"><img src="static/twitter.png" alt="Twitter"/></a>
+  			<a href="http://www.linkedin.com/pub/merri-zervas/105/742/b82"><img src="static/linkedin.png" alt="LinkedIn"/></a>
+  		</div>
+  	</section>
+  <p> &copy; Merri Zervas 2015</p>
+ </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../static/bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>
+
+
+

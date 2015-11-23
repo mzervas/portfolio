@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block nav1 %}
+<nav>
+  <section id="nav1">
+  <ul class="nav nav-pills nav-justified">
+      <li class="active"><a href="index">Home</a></li>
+      <li role="presentation"><a href="about">About</a></li>
+      <li role="presentation"><a href="skills">Skills</a></li>
+      <li role="presentation"><a href="photos">Photos</a></li>
+      <li role="presentation"><a href="contact">Contact</a></li>
+    </ul>
+  </section>
+</nav>
+{% endblock %}
+
+{% block nav2 %}
+<nav>
+  <section id="nav2">
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+        <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-justify"></span></a>
+        <ul class="dropdown-menu">
+          <li class ="active"><a href="index">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="skills">Skills</a></li>
+          <li><a href="photos">Photos</a></li>
+          <li><a href="contact">Contact</a></li>
+      </ul>
+      </li>
+  </ul>
+  </section>
+</nav>
+{% endblock %}
+
+{% block home %}
+  <section id = "homejumbo">
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+           <div class="tab-content">
+            <div class="jumbotron"><p>
+                <div id="hometext" class="tab-pane fade in active">
+                  <h2>Welcome!</h2>
+                  <h3>I'm Merri.</h3>
+                  <h3>I'm a Junior in the BSI program at U of M's School of Information.</h3>
+                  <a href="skills.html"><h3>Check out what I've made!</h3></a>
+                </div>
+            </div>
+          </div>
+          <section id ="mid"> 
+          <img src ="static/me.jpg" alt="Merri Zervas"/>
+          </section>
+        </div>   
+      </div>
+    </section>
+{% endblock %}

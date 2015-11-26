@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-#from flask.ext.mail import Message, Mail   	#Import files -- capitalization import!
+from flask import Flask, render_template, request
+#from flask.ext.mail import Message, Mail   	#Import files -- capitalization import!\
+from forms import ContactForm
 app = Flask(__name__)		#Initialize application
 #mail = Mail()
 #app.config["MAIL_SERVER"]
@@ -42,6 +43,16 @@ def somethingLast():
 @app.route('/proj')
 def somethingNew():
 	return render_template("project.html")
+
+@app.route('/contactform', methods=['GET','POST'])
+def idk():
+	form = ContactForm()
+
+	if request.method == 'POST':
+		return 'Form posted.'
+
+	elif request.method == 'GET':
+		return render_template("contactform.html", form=form)
 
 @app.errorhandler(404)
 def page_not_found(error):

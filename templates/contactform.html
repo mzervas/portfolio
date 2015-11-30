@@ -1,15 +1,37 @@
-{% extends base.html %}
-from flask.ext.wtf import Form
-from wtforms import TextField, TextAreaField, SubmitField
-from wtforms.fields.html5 import EmailField
+{% extends "base.html" %}
 
 {% block home %}
-class ContactForm(Form):
-  name = TextField("Name")
-  email = EmailField("Email")
-  passw = TextField("Password")
+<section id="cont">
+  <div class="tab-content">
+    <div class="jumbotron">
+      <div id="Contact" class="tab-pane fade in active">
+        <h2>Contact</h2>
+            <p>Phone: (989) 494-2089</p>
+            <p>Email: mzervas@umich.edu</p>
+            <p>Fill out the form below to send me an email!</p>
 
-  subject = TextField("Subject")
-  message = TextAreaField("Message")
-  submit = SubmitField("Send")
+<form action="{{ url_for('idk') }}" method=post>
+
+    {{ form.hidden_tag() }}
+ 
+    {{ form.name.label }} 
+    {{ form.name }}
+    <br><br>
+    {{ form.email.label }}
+    {{ form.email }}
+    <br><br>
+    {{ form.subject.label }}
+    {{ form.subject }}
+    <br><br>
+    {{ form.message.label }}
+    {{ form.message }}
+    <br><br>
+    {{ form.submit }}
+
+            <p>Or follow any of the social media site links below!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

@@ -1,11 +1,19 @@
 from flask import Flask, render_template, request
-#from flask.ext.mail import Message, Mail   	#Import files -- capitalization import!\
+from flask.ext.mail import Message, Mail   	#Import files -- capitalization import!\
 from forms import ContactForm
+mail = Mail()
 app = Flask(__name__)		#Initialize application
-#mail = Mail()
-#app.config["MAIL_SERVER"]
 
 
+app.secret_key = 'WebDesign'
+
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USE_SSL"] = True
+app.config["MAIL_USERNAME"] = 'umsiwebdesign@gmail.com'
+app.config["MAIL_PASSWORD"] = '105sstate'
+
+mail.init_app(app)
 
 
 x = open("strings.txt","r")
@@ -36,23 +44,24 @@ def somethingMore():
 def somethingAgain():
 	return render_template("photos.html", name="photos")
 
-@app.route('/contact')
-def somethingLast():
-	return render_template("contact.html", name="contact")
-
 @app.route('/proj')
 def somethingNew():
 	return render_template("project.html")
 
-@app.route('/contactform', methods=['GET','POST'])
+@app.route('/contact', methods=['GET','POST'])
 def idk():
 	form = ContactForm()
 
 	if request.method == 'POST':
-		return 'Form posted.'
+		msg = Message(form.subject.data, sender="merrizervas@gmail.com", recipients=["mzervas@umich.edu"])
+		msg.body = """
+			From: %s <%s>
+			%s""" % (form.name.data, form.email.data, form.message.data)
+		mail.send(msg)
+		return render_template('contact.html', form=form, message="Thank you for sumitting your information!", name="contact")
 
 	elif request.method == 'GET':
-		return render_template("contactform.html", form=form)
+		return render_template("contact.html", form=form, message="Thanks!", name="contact")
 
 @app.errorhandler(404)
 def page_not_found(error):

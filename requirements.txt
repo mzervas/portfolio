@@ -64,7 +64,6 @@ python-twitter==2.2
 pytz==2013.7
 requests==2.4.3
 requests-oauthlib==0.4.2
-setuptools>=0.7
 scipy==0.13.0b1
 six==1.4.1
 virtualenv==13.1.2

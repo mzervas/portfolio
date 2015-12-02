@@ -61,7 +61,7 @@ def idk():
 		return render_template('contact.html', form=form, message="Thank you for sumitting your information!", name="contact")
 
 	elif request.method == 'GET':
-		return render_template("contact.html", form=form, message="Thanks!", name="contact")
+		return render_template("contact.html", form=form, name="contact")
 
 @app.errorhandler(404)
 def page_not_found(error):

@@ -1,4 +1,8 @@
-@media only screen and (min-device-width: 320px)  {
+@media only screen and (min-device-width: 320px) {
+
+	.bab {
+		background-color: #A6A4A7;
+	}
 
 	#h{
 		display: block;
@@ -8,7 +12,7 @@
 		opacity: 0.6;
 		/*margin-bottom: 4%;*/
 		font-size: 30%;
-
+		width: 100%;
 	}
 	.top {
 		top: 0;
@@ -19,8 +23,14 @@
 		color: white;
 	}
 
+
+
 	body {
-		background-image: url("../static/testingpic.jpg");
+		background-image: url(testingpic.jpg);
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		position: static;
+		will-change:top;
 		/*background: white;*/
 	}
 
@@ -40,14 +50,15 @@
 	}
 
 	#nav2 {
+		/*position: static;*/
 		display: inline;
-		/*margin-top: 10%;*/
+		margin-bottom: 10%;
 	}
 
 	#nav2 span {
 		/*margin-top: 4%;*/
 		font-size: 250%;
-		color: white;
+		color: #28151B;
 	}
 
 	#nav2 a {
@@ -55,28 +66,32 @@
 	}
 
 	#homejumbo .jumbotron {
-		/*margin-top: 400px;*/
-		display: block;
+		/*clear: right;*/
+		/*margin-top: 1500px;*/
+		display: inline-block;
 		/*opacity: 0.3;*/
 		background: white;
 		/*border-radius: 30px;*/
-		margin-left: 4%;
-		margin-right: 4%;
+		width: 60%;
+		/*margin-left: 50%;*/
+		margin-right: 15%;
 		text-align: center;
+		padding: 5px;
 	}
 
 	#homejumbo .jumbotron h2, h3 {
+		/*Update these in large view*/
 		font-size: 250%;
 		color: #231F29;
 	}
 
-/*
+	#mid div {
+		margin-top: 4%;
+	}
+
 	#mid img {
-		border-radius: 30px;
-		display: block;
-		width: 92%;
-		margin: 4%;
-	}*/
+		width: 35%;
+	}
 
 	#bottom img {
 		width: 10%;
@@ -241,6 +256,10 @@
 
 @media only screen and (min-device-width: 800px) {
 
+		/*.top {
+			position: fixed;
+		}*/
+
 	#nav2 {
 		display: none;
 	}
@@ -264,13 +283,14 @@
 		 background-color: #5E743F !important;
 	 }
 	 #nav1 nav-pills > .active > a > .badge {
-		 color:#5E743F !important;
-		 background-color:#fff;
+		 color: #5E743F !important;
+		 background-color: #fff;
 	 }
+
 	#homejumbo {
 		display: block;
-		margin-top: 15%;
-		margin-bottom: 8%;
+		margin-top: 14%;
+		margin-bottom: 10%;
 
 	}
 	#homejumbo .jumbotron {
@@ -278,7 +298,7 @@
 		border-radius: 10px;
 		/*float: left;*/
 		width: 60%;
-		margin: 130px 1% 0 0%;
+		margin: 0 1% 0 0%;
 	}
 
 	#mid div {
